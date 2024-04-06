@@ -1,4 +1,4 @@
-# Laravel 10, Vue.js 3,Tailwind and Vite Boilerplate
+# Laravel 10, Vue.js 3,Tailwind and Vite e-bulletin-laravue-v2
 
 A Laravel 10 Single Page Application boilerplate using Vue.js 3 and  Vite
 
@@ -23,4 +23,4 @@ Run the Vite development server...
 Build and version the assets for production...
 
       npm run build
-#e-bulletin-laravue-v2
+
