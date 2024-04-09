@@ -33,5 +33,13 @@
 import Navbar from '../components/Navbar.vue'
 import DisplayContent from '../components/DisplayContent.vue'
 import Sidebar from '../components/Sidebar.vue'
+import { useRouter } from 'vue-router'
+
+// const router = useRouter()
+
+// const goToLogin = () => {
+//     console.log('object');
+//   router.push('/login')
+// }
 </script>
   
