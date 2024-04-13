@@ -11,7 +11,7 @@ use App\Http\Requests\{
 
 use App\Models\{
     User,
-    Per
+    // Per
 };
 
 class AuthController extends Controller

@@ -8,8 +8,8 @@
       <div class="container mx-auto flex justify-between items-center">
         <!-- Logo -->
         <div class="flex items-center">
-          <img src="logo.png" alt="Logo" class="h-8 w-8 mr-2">
-          <span class="text-white font-bold text-lg">Your Logo</span>
+          <a href="/"><img src="images/common/LOGO-TC-V1.png" alt="Logo" class="h-8 w-8 mr-2"></a>
+          <!-- <span class="text-white font-bold text-lg">Your Logo</span> -->
           <!-- {{ d }} -->
         </div>
 
@@ -95,6 +95,7 @@ const logout = async () => {
             d.value = null
             authStore.userDetails = null
             authStore.logout()
+            localStorage.removeItem('userDetails');
             router.push('/')
         }
     } catch (error) {

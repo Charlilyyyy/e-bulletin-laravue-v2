@@ -89,6 +89,7 @@ const apiLogin = async () => {
             console.log(a)
             router.push('/')
             authStore.userDetails = a.user
+            localStorage.setItem('userDetails', JSON.stringify(a.user));
             authStore.login()
         }
     } catch (error) {
