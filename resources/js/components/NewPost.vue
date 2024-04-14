@@ -25,7 +25,7 @@
                             <!-- <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
                                 Create New Post
                             </h3> -->   
-                            {{ post }}
+                            <!-- {{ post }} -->
                             <div class="mt-5 max-w-xl mx-auto">
                                 <!-- <p class="text-sm text-gray-500">
                                 <input type="text" placeholder=""/>

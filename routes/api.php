@@ -24,3 +24,10 @@ Route::post('/login',[AuthController::class,'login'])->name('api.login');
 Route::post('/logout',[AuthController::class,'logout'])->name('api.logout');
 Route::post('/posts',[PostController::class, 'create'])->name('api.post.create');
 Route::get('/allPosts',[PostController::class, 'index'])->name('api.posts');
+// Route::get('/userPosts',[PostController::class, 'userPosts'])->name('api.user.posts');
+
+Route::middleware('auth:sanctum')->group(function(){
+    // Route::post('/logout',[AuthController::class,'logout'])->name('api.logout');
+    // Route::post('/posts',[PostController::class, 'create'])->name('api.post.create');
+    Route::get('/userPosts',[PostController::class, 'userPosts'])->name('api.user.posts');
+});

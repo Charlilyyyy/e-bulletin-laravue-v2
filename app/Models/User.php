@@ -49,4 +49,9 @@ class User extends Authenticatable
     {
         return User::where('email',$email)->first();
     }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'user_id', 'id');
+    }
 }

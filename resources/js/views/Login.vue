@@ -1,7 +1,7 @@
 <template>
-    <div class="overflow-y-hidden">
+    <div style="max-height: 100vh;" class="overflow-y-hidden">
         <Navbar/>
-        <div class="container mx-auto mt-8 ">
+        <div class="container mx-auto ">
             <!-- Main Content Layout -->
             <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
                 <div class="max-w-md w-full space-y-8">
@@ -36,7 +36,7 @@
                                 </a>
                             </div>
                         </div>
-                        {{ cred }}
+                        <!-- {{ cred }} -->
                         <div>
                             <button @click="apiLogin()" type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                 <span class="absolute left-0 inset-y-0 flex items-center pl-3">
@@ -89,6 +89,8 @@ const apiLogin = async () => {
             console.log(a)
             router.push('/')
             authStore.userDetails = a.user
+            authStore.token = a.token
+            localStorage.setItem('token', a.token);
             localStorage.setItem('userDetails', JSON.stringify(a.user));
             authStore.login()
         }

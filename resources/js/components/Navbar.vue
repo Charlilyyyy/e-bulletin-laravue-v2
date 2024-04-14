@@ -47,9 +47,11 @@
           <li v-if="!isLoggedIn"><router-link to="/login">Login</router-link></li>
         <li v-if="isLoggedIn"><button @click="logout">Logout</button></li>
         <!-- {{ d }} -->
-          <svg xmlns="http://www.w3.org/2000/svg" style="height: 2rem;width: 2rem;" class="text-white cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M7.25 4.5a.75.75 0 0 1 .75.75v2a.75.75 0 1 1-1.5 0v-2a.75.75 0 0 1 .75-.75zM7.25 9a.75.75 0 0 1 .75.75v6a.75.75 0 1 1-1.5 0v-6a.75.75 0 0 1 .75-.75zM12.25 6a.75.75 0 0 1 1.5 0v7.795a2 2 0 0 1-1.685 1.977l-.086.018a2 2 0 0 1-1.648-.531l-2.227-2.5a.75.75 0 1 1 1.05-1.064l1.576 1.768 1.772-2.12a.75.75 0 0 1 1.113 1.002l-2.25 2.7a.5.5 0 0 1-.384.18H9.25a.75.75 0 0 1 0-1.5h2.75a1 1 0 0 0 .75-.341l2.25-2.7a.75.75 0 1 1 1.114 1.002l-2.227 2.67a2 2 0 0 1-1.648.531l-.086-.018a2 2 0 0 1-1.685-1.977V6z"/>
-          </svg>
+          <a href="/profile">
+            <svg xmlns="http://www.w3.org/2000/svg" style="height: 2rem;width: 2rem;" class="text-white cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M7.25 4.5a.75.75 0 0 1 .75.75v2a.75.75 0 1 1-1.5 0v-2a.75.75 0 0 1 .75-.75zM7.25 9a.75.75 0 0 1 .75.75v6a.75.75 0 1 1-1.5 0v-6a.75.75 0 0 1 .75-.75zM12.25 6a.75.75 0 0 1 1.5 0v7.795a2 2 0 0 1-1.685 1.977l-.086.018a2 2 0 0 1-1.648-.531l-2.227-2.5a.75.75 0 1 1 1.05-1.064l1.576 1.768 1.772-2.12a.75.75 0 0 1 1.113 1.002l-2.25 2.7a.5.5 0 0 1-.384.18H9.25a.75.75 0 0 1 0-1.5h2.75a1 1 0 0 0 .75-.341l2.25-2.7a.75.75 0 1 1 1.114 1.002l-2.227 2.67a2 2 0 0 1-1.648.531l-.086-.018a2 2 0 0 1-1.685-1.977V6z"/>
+            </svg>
+          </a>
         </div>
       </div>
     </nav>

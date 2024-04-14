@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('app');
-});
+// Route::get('/', function () {
+//     return view('app');
+// });
 
-// Route::get('/{any}', function () {
-//     return view('app'); // Replace 'app' with your Vue application entry point
-// })->where('any', '.*');
+Route::get('/{any}', function () {
+    return view('app'); 
+})->where('any', '.*');

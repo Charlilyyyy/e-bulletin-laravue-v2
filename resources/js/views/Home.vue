@@ -40,7 +40,7 @@
     />
     <!-- {{ postStore.posts }} -->
 
-    <!-- {{ authStore.userDetails }} -->
+    
 </template>
   
 <script setup>
@@ -83,14 +83,17 @@ const handleCloseCreate = (data) => {
 }
 
 const handleCreate = async (data) => {
-    const userData = JSON.parse(authStore.userDetails)
+    
+    const userData = authStore.userDetails
+    console.log(userData);
     try{
         const response = await axios.post('/api/posts', {
             posts: data,
             userId: userData.id
         })
         console.log(response.data)
-        postStore.posts.push(response.data.post)
+        // postStore.posts.push(response.data.post)
+        postStore.fetchPosts()
     }catch (error) {
         console.error('Error while posting data:', error)
     }

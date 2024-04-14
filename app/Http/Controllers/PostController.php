@@ -11,7 +11,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        return Post::all();
+        return Post::with('user')->get();
     }
 
     public function create(Request $request)
@@ -32,5 +32,10 @@ class PostController extends Controller
             'message' => 'Successfully create post',
             'post' => $post
         ],201);
+    }
+
+    public function userPosts()
+    {
+        return Post::with('user')->where('user_id',Auth::user()->id)->get();
     }
 }
